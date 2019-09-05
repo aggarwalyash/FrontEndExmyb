@@ -15,9 +15,31 @@
         font-weight: bolder;
         font-size: 48px;
       }
+      .collab{
+        font-weight: bolder;
+        font-size: 52px;
+        color: #ffffff;
+      }
+      .frame5{
+        background-color: #87c240;
+        padding: 65px;
+        text-align: center;
+      }
+      .framecontent5{
+        margin-top: 20px;
+        font-weight: 600;
+        color: #628A3C;
+        word-spacing: 1px;
+      }
       .getStarted{
         background-color: #628A3C;
         color: #ffffff;
+      }
+
+      .getStarted2{
+        background-color: #628A3C;
+        color: #ffffff;
+        position: relative;
       }
       .getStarted:hover{
         background-color: #87c240;
@@ -30,19 +52,29 @@
         color: white;
         background-color: #87c240;
         margin-right: 10px;
+        border: 1px solid #628A3C;
+        border-radius: 8px;
         -webkit-transition: margin-right 0.8s;
       }
       .nav.navbar-nav.flex-row.justify-content-center.flex-nowrap li a.slink{
         color: #628A3C;
         margin-right: 10px;
         border: 1px solid #628A3C;
-        border-radius: 5px;
+        border-radius: 8px;
       }
       .nav.navbar-nav.flex-row.justify-content-center.flex-nowrap li a:hover{
         color: white;
         background-color: #87c240;
         margin-right: 10px;
+        border: 1px solid #628A3C;
+        border-radius: 8px;
         -webkit-transition: margin-right 0.8s;
+      }
+      .fmcontent2{
+        color: #A9A9A9;
+        font-weight: 500;
+        margin-top: 20px;
+        padding-right: 60px;
       }
     </style>
 
@@ -70,20 +102,20 @@
               </ul>
               <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
                   <li class="nav-item"><a class="nav-link" href="">Login</a> </li>
-                  <li class="nav-item"><a class="nav-link slink" href="">SignUp</a> </li>
+                  <li class="nav-item"><a class="btn btn-sm nav-link slink" href="">SignUp</a> </li>
               </ul>
           </div>
       </nav>
 
-      <div class="container">
+      <div class="container frame1">
         <div class="row" style="margin-top:80px;">
           <div class="col-md-6">
             <h1 class="frontline">Get your funding now!</h1>
             <p style="color: #A9A9A9;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <form method="post">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Enter your e-mail ID">
                   <div class="input-group-append">
+                  <input type="text" class="form-control" placeholder="Enter your e-mail ID">
                     <button class="btn btn-outline getStarted"  type="submit">Get Started</button>
                   </div>
                 </div>
@@ -92,19 +124,52 @@
         </div>
       </div>
 
+      <div class="container frame2" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-6">
+              <img src="http://placehold.it/500x400?text=Logo" alt="">
+            </div>
+            <div class="col-md-6 mt-4">
+                <h1 class="frontline">Funding</h1>
+                <p class="fmcontent2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="btn btn-outline-success" href="#">How it works --></a>
+            </div>
+        </div>
+      </div>
 
+      <div class="container frame3" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <h1 class="frontline">Expand My Business</h1>
+                <p class="fmcontent2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="btn btn-outline-success" href="#">How it works --></a>
+            </div>
+            <div class="col-md-6">
+              <img src="http://placehold.it/500x400?text=Logo" alt="">
+            </div>
+        </div>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
+      <div class="d-flex justify-content-center frame5" style="margin-top: 50px;">
+        <div>
+          <h1 class="collab">Looking For Collabaration ?</h1>
+          <p class="framecontent5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <form method="post">
+              <div class="input-group mb-3" style="margin-left: 180px;">
+                <div class="input-group-append">
+                <input type="text" class="form-control" width="100%" placeholder="Enter your e-mail ID">
+                  <button class="btn btn-block btn-outline getStarted2"  type="submit">Get Started</button>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
 
 
 
