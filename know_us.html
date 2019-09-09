@@ -21,37 +21,10 @@
     <style>
       .frontline{
         font-weight: bolder;
-        font-size: 48px;
-      }
-      .collab{
-        font-weight: bolder;
-        font-size: 52px;
-        color: #ffffff;
-      }
-      .frame5{
-        background-color: #87c240;
-        padding: 65px;
-        text-align: center;
-      }
-      .framecontent5{
-        margin-top: 20px;
-        font-weight: 600;
-        color: #628A3C;
-        word-spacing: 1px;
-      }
-      .getStarted{
-        background-color: #628A3C;
-        color: #ffffff;
+        font-size: 55px;
       }
 
-      .getStarted2{
-        background-color: #628A3C;
-        color: #ffffff;
-        position: relative;
-      }
-      .getStarted:hover{
-        background-color: #87c240;
-      }
+
       .navbar-nav.mx-auto.text-center li a {
         font-weight: 550;
         color: black;
@@ -78,129 +51,65 @@
         border-radius: 8px;
         -webkit-transition: margin-right 0.8s;
       }
-      .fmcontent2{
-        color: #A9A9A9;
-        font-weight: 500;
-        margin-top: 20px;
-        padding-right: 60px;
-      }
-      .testimonial{
+
+      .know_frame1,.know_frame2,.know_frame4,.know_frame5{
         text-align: center;
-        font-size: 45px;
-        font-weight: bolder;
+      }
+      .know_f_cont1{
+        padding: 40px;
+        padding-top: 10px;
       }
 
-      /* Slider */
-      .slick-slide {
-          margin: 0px 20px;
-      }
-      .slick-slide img {
-          width: 100%;
-      }
-      .slick-slider
-      {
-          position: relative;
-          display: block;
-          box-sizing: border-box;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-                  user-select: none;
-          -webkit-touch-callout: none;
-          -khtml-user-select: none;
-          -ms-touch-action: pan-y;
-              touch-action: pan-y;
-          -webkit-tap-highlight-color: transparent;
-      }
-      .slick-list
-      {
-          position: relative;
-          display: block;
-          overflow: hidden;
-          margin: 0;
-          padding: 0;
-      }
-      .slick-list:focus
-      {
-          outline: none;
-      }
-      .slick-list.dragging
-      {
-          cursor: pointer;
-          cursor: hand;
-      }
-      .slick-slider .slick-track,
-      .slick-slider .slick-list
-      {
-          -webkit-transform: translate3d(0, 0, 0);
-             -moz-transform: translate3d(0, 0, 0);
-              -ms-transform: translate3d(0, 0, 0);
-               -o-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-      }
-      .slick-track
-      {
-          position: relative;
-          top: 0;
-          left: 0;
-          display: block;
-      }
-      .slick-track:before,
-      .slick-track:after
-      {
-          display: table;
-          content: '';
-      }
-      .slick-track:after
-      {
-          clear: both;
-      }
-      .slick-loading .slick-track
-      {
-          visibility: hidden;
-      }
-      .slick-slide
-      {
-          display: none;
-          float: left;
-          height: 100%;
-          min-height: 1px;
-      }
-      [dir='rtl'] .slick-slide
-      {
-          float: right;
-      }
-      .slick-slide img
-      {
-          display: block;
-      }
-      .slick-slide.slick-loading img
-      {
-          display: none;
-      }
-      .slick-slide.dragging img
-      {
-          pointer-events: none;
-      }
-      .slick-initialized .slick-slide
-      {
-          display: block;
-      }
-      .slick-loading .slick-slide
-      {
-          visibility: hidden;
-      }
-      .slick-vertical .slick-slide
-      {
-          display: block;
-          height: auto;
-          border: 1px solid transparent;
-      }
-      .slick-arrow.slick-hidden {
-          display: none;
-      }
-      /* slider */
+      /* team profile */
 
+      .container1,.container2,.container3,.container4 {
+        position: relative;
+        margin-right: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #87c240;
+      }
+
+      .container1:hover .overlay {
+        opacity: 1;
+      }
+      .container2:hover .overlay {
+        opacity: 1;
+      }
+      .container3:hover .overlay {
+        opacity: 1;
+      }
+      .container4:hover .overlay {
+        opacity: 1;
+      }
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* team profile */
+
+      .know_frame6{
+        background-color: #87c240;
+        text-align: center;
+      }
 
       /* footer */
       .fa {
@@ -228,7 +137,9 @@
         background: #dd4b39;
         color: white;
       }
-
+      .member_image{
+        margin-right: auto;
+      }
       /* footer */
     </style>
 
@@ -261,51 +172,15 @@
           </div>
       </nav>
 
-      <div class="container frame1">
-        <div class="row" style="margin-top:80px;">
-          <div class="col-md-6">
-            <h1 class="frontline">Get your funding now!</h1>
-            <p style="color: #A9A9A9;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <form method="post">
-                <div class="input-group mb-3">
-                  <div class="input-group-append">
-                  <input type="text" class="form-control" placeholder="Enter your e-mail ID">
-                    <button class="btn btn-outline getStarted"  type="submit">Get Started</button>
-                  </div>
-                </div>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <img src="http://placehold.it/500x400?text=Logo" alt="">
-          </div>
-        </div>
-      </div>
 
-      <div class="container frame2" style="margin-top: 50px;">
+      <div class="container know_frame1" style="margin-top: 50px;">
         <div class="row">
-            <div class="col-md-6">
-              <img src="http://placehold.it/500x400?text=Logo" alt="">
-            </div>
             <div class="col-md-6 mt-4">
-                <h1 class="frontline">Funding</h1>
-                <p class="fmcontent2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <h1 class="frontline">What we do</h1>
+                <p class="know_f_cont1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a class="btn btn-outline-success" href="#">How it works --></a>
-            </div>
-        </div>
-      </div>
-
-      <div class="container frame3" style="margin-top: 50px;">
-        <div class="row">
-            <div class="col-md-6 mt-4">
-                <h1 class="frontline">Expand My Business</h1>
-                <p class="fmcontent2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a class="btn btn-outline-success" href="#">How it works --></a>
             </div>
             <div class="col-md-6">
               <img src="http://placehold.it/500x400?text=Logo" alt="">
@@ -313,41 +188,97 @@
         </div>
       </div>
 
-      <div class="frame4" style="margin-top: 50px;">
-        <h1 class="testimonial">Our clients & testimonials</h1>
-      </div>
-
-
-      <div class="container">
-        <!-- <h2>Our  Partners</h2> -->
-         <section class="customer-logos slider">
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
-            <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
-         </section>
-      </div>
-
-
-      <div class="d-flex justify-content-center frame5" style="margin-top: 50px;">
-        <div>
-          <h1 class="collab">Looking For Collabaration ?</h1>
-          <p class="framecontent5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <form method="post">
-              <div class="input-group mb-3" style="margin-left: 180px;">
-                <div class="input-group-append">
-                <input type="text" class="form-control" width="100%" placeholder="Enter your e-mail ID">
-                  <button class="btn btn-block btn-outline getStarted2"  type="submit">Get Started</button>
-                </div>
-              </div>
-          </form>
+      <div class="container know_frame2" style="margin-top: 60px;">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="frontline">How we do</h1>
+            <p style="padding: 20px 220px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="http://placehold.it/200x200?text=Logo" alt="">
+          </div>
+          <div class="col-md-4">
+            <img src="http://placehold.it/200x200?text=Logo" alt="">
+          </div>
+          <div class="col-md-4">
+            <img src="http://placehold.it/200x200?text=Logo" alt="">
+          </div>
         </div>
       </div>
 
+      <div class="container know_frame3" style="margin-top: 120px;">
+        <div class="row">
+          <div class="col-md-6">
+              <img src="http://placehold.it/440x380?text=Logo" alt="">
+          </div>
+          <div class="col-md-6">
+            <h1 class="frontline" style="padding-left: 30px;">For who we do</h1>
+            <p style="padding: 20px 100px 20px 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+               sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container know_frame4" style="margin-top: 100px;">
+        <h1 class="frontline" style="text-align: center;">Our Mission</h1>
+        <p style="padding: 30px 150px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+           ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+           sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="container know_frame5" style="margin-top: 100px;">
+        <h1 class="frontline" style="">Our Team</h1>
+        <div class="row">
+
+          <div class="container1">
+            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
+            <div class="overlay">
+              <div class="text">Nishant Behl</div>
+            </div>
+          </div>
+          <div class="container2">
+            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
+            <div class="overlay">
+              <div class="text">Rohan Barua</div>
+            </div>
+          </div>
+          <div class="container3">
+            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
+            <div class="overlay">
+              <div class="text">Tanishka Luthra</div>
+            </div>
+          </div>
+          <div class="container4">
+            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
+            <div class="overlay">
+              <div class="text">Yash Aggarwal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="know_frame6" style="margin-top: 100px;padding: 80px;">
+        <h1 class="frontline" style="color: #ffffff;">Join Our Team</h1>
+        <p style="color: #628A3C;font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,et dolore magna aliqua.</p>
+        <div  class="center-block text-center">
+            <button type="submit" class="btn btn-md" style="background-color: #628A3C;color: #ffffff;">See Openings</button>
+            <button type="submit" class="btn btn-md" style="background-color: #87c240;border: 1px solid #628A3C;color: #ffffff;">Email Us</button>
+        </div>
+      </div>
 
         <!-- Footer -->
         <footer class="page-footer">
