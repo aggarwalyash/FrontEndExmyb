@@ -7,20 +7,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Exmyb</title>
   </head>
-
   <body>
 
     <style>
       .frontline{
         font-weight: bolder;
-        font-size: 55px;
+        font-size: 48px;
+      }
+      .getStarted{
+        background-color: #628A3C;
+        color: #ffffff;
+      }
+
+      .getStarted:hover{
+        background-color: #87c240;
+      }
+      .collab{
+        font-weight: bolder;
+        font-size: 52px;
+        color: #ffffff;
       }
 
       .navbar-nav.mx-auto.text-center li a {
@@ -50,64 +61,26 @@
         -webkit-transition: margin-right 0.8s;
       }
 
-      .know_frame1,.know_frame2,.know_frame4,.know_frame5{
+      .startupp_frame1{
         text-align: center;
-      }
-      .know_f_cont1{
-        padding: 40px;
-        padding-top: 10px;
+        padding: 60px 200px;
       }
 
-      /* team profile */
-
-      .container1,.container2,.container3,.container4 {
-        position: relative;
-        margin-right: auto;
+      .startupp_frame2{
+        background-image: url('http://placehold.it/1410x270?text=Logo');
+        background-repeat: no-repeat;
+        height: 250px;
       }
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-
-        background-color: #87c240;
-      }
-
-      .container1:hover .overlay {
-        opacity: 1;
-      }
-      .container2:hover .overlay {
-        opacity: 1;
-      }
-      .container3:hover .overlay {
-        opacity: 1;
-      }
-      .container4:hover .overlay {
-        opacity: 1;
-      }
-      .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      /* team profile */
-
-      .know_frame6{
+      .startupp_frame3{
+        margin-top: 80px;
         background-color: #87c240;
         text-align: center;
+        padding: 90px;
+      }
+      .startupp_frame3_content{
+        font-weight: 600;
+        color: #628A3C;
+        word-spacing: 1px;
       }
 
       /* footer */
@@ -136,10 +109,14 @@
         background: #dd4b39;
         color: white;
       }
-      .member_image{
-        margin-right: auto;
-      }
+
       /* footer */
+
+      /*Create ripple effect*/
+
+
+      /* End Ripple Effect */
+
     </style>
 
       <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center">
@@ -171,113 +148,45 @@
           </div>
       </nav>
 
-
-      <div class="container know_frame1" style="margin-top: 50px;">
-        <div class="row">
-            <div class="col-md-6 mt-4">
-                <h1 class="frontline">What we do</h1>
-                <p class="know_f_cont1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-md-6">
-              <img src="http://placehold.it/500x400?text=Logo" alt="">
-            </div>
-        </div>
-      </div>
-
-      <div class="container know_frame2" style="margin-top: 60px;">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="frontline">How we do</h1>
-            <p style="padding: 20px 220px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="http://placehold.it/200x200?text=Logo" alt="">
-          </div>
-          <div class="col-md-4">
-            <img src="http://placehold.it/200x200?text=Logo" alt="">
-          </div>
-          <div class="col-md-4">
-            <img src="http://placehold.it/200x200?text=Logo" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="container know_frame3" style="margin-top: 120px;">
-        <div class="row">
-          <div class="col-md-6">
-              <img src="http://placehold.it/440x380?text=Logo" alt="">
-          </div>
-          <div class="col-md-6">
-            <h1 class="frontline" style="padding-left: 30px;">For who we do</h1>
-            <p style="padding: 20px 100px 20px 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container know_frame4" style="margin-top: 100px;">
-        <h1 class="frontline" style="text-align: center;">Our Mission</h1>
-        <p style="padding: 30px 150px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      <div class="container startupp_frame1">
+        <p style="color: #A9A9A9;" class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-           ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-           sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+           Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <form method="post">
+          <div class="col-12">
+             <div class="input-group input-group-md w-50 mx-auto">
+               <div class="input-group-append">
+               <input type="text" class="form-control" placeholder="Enter your e-mail ID">
+                <button class="btn btn-outline getStarted"  type="submit">Get Started</button>
+               </div>
+             </div>
+          </div>
+        </form>
       </div>
 
-      <div class="container know_frame5" style="margin-top: 100px;">
-        <h1 class="frontline" style="">Our Team</h1>
-        <div class="row">
-
-          <div class="container1">
-            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
-            <div class="overlay rounded-circle">
-              <div class="text">Nishant Behl</div>
-            </div>
-          </div>
-          <div class="container2">
-            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
-            <div class="overlay rounded-circle">
-              <div class="text">Rohan Barua</div>
-            </div>
-          </div>
-          <div class="container3">
-            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
-            <div class="overlay rounded-circle">
-              <div class="text">Tanishka Luthra</div>
-            </div>
-          </div>
-          <div class="container4">
-            <img src="http://placehold.it/200x200?text=Logo" alt="Avatar" class="image rounded-circle">
-            <div class="overlay rounded-circle">
-              <div class="text">Yash Aggarwal</div>
-            </div>
-          </div>
-        </div>
+      <div class="startupp_frame2">
       </div>
 
-      <div class="know_frame6" style="margin-top: 100px;padding: 80px;">
-        <h1 class="frontline" style="color: #ffffff;">Join Our Team</h1>
-        <p style="color: #628A3C;font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,et dolore magna aliqua.</p>
-        <div class="center-block text-center">
-            <button type="submit" class="btn btn-md" style="background-color: #628A3C;color: #ffffff;">See Openings</button>
-            <button type="submit" class="btn btn-md" style="background-color: #87c240;border: 1px solid #628A3C;color: #ffffff;">Email Us</button>
-        </div>
+      <div class="startupp_frame3">
+        <h1 class="collab">Let's get started</h1>
+        <p class="startupp_frame3_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <form method="post">
+          <div class="col-12">
+             <div class="input-group input-group-md w-50 mx-auto">
+               <div class="input-group-append">
+               <input type="text" class="form-control" placeholder="Enter your e-mail ID">
+                <button class="btn btn-outline getStarted"  type="submit">Get Started</button>
+               </div>
+             </div>
+          </div>
+        </form>
       </div>
+
 
         <!-- Footer -->
         <footer class="page-footer">
