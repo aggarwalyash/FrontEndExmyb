@@ -13,31 +13,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Exmyb</title>
   </head>
+
   <body>
 
     <style>
-      .frontline{
-        font-weight: bolder;
-        font-size: 48px;
-      }
-      .getStarted{
-        background-color: #628A3C;
-        color: #ffffff;
+      @font-face {
+        font-family: myFirstFont;
+        src: url(fonts/Uniform.ttf);
       }
 
-      .getStarted:hover{
-        background-color: #87c240;
+      label{
+        font-family: myFirstFont;
       }
-      .collab{
-        font-weight: bolder;
-        font-size: 52px;
-        color: #ffffff;
-      }
-
       .navbar-nav.mx-auto.text-center li a {
         font-weight: 550;
         color: black;
       }
+
       .navbar-nav.mx-auto.text-center li a:hover {
         color: #87c240;
         /* background-color: #87c240; */
@@ -61,26 +53,14 @@
         -webkit-transition: margin-right 0.8s;
       }
 
-      .startupp_frame1{
-        text-align: center;
-        padding: 60px 200px;
+      .profile_details_frame1{
+        /* text-align: center; */
+        margin-top: 50px;
       }
-
-      .startupp_frame2{
-        background-image: url('http://placehold.it/1410x270?text=Logo');
-        background-repeat: no-repeat;
-        height: 250px;
-      }
-      .startupp_frame3{
-        margin-top: 80px;
-        background-color: #87c240;
-        text-align: center;
-        padding: 90px;
-      }
-      .startupp_frame3_content{
-        font-weight: 600;
-        color: #628A3C;
-        word-spacing: 1px;
+      .centerimage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       /* footer */
@@ -109,14 +89,10 @@
         background: #dd4b39;
         color: white;
       }
-
+      .member_image{
+        margin-right: auto;
+      }
       /* footer */
-
-      /*Create ripple effect*/
-
-
-      /* End Ripple Effect */
-
     </style>
 
       <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center">
@@ -148,43 +124,147 @@
           </div>
       </nav>
 
-      <div class="container startupp_frame1">
-        <p style="color: #A9A9A9;" class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-           Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <form method="post">
-          <div class="col-12">
-             <div class="input-group input-group-md w-50 mx-auto">
-               <div class="input-group-append">
-               <input type="text" class="form-control" placeholder="Enter your e-mail ID">
-                <button class="btn btn-outline getStarted"  type="submit">Get Started</button>
-               </div>
-             </div>
-          </div>
-        </form>
-      </div>
 
-      <div class="startupp_frame2">
-      </div>
+      <div class="profile_details_frame1">
+        <div class="">
+          <h1 style="text-align: center;">Profile Details</h1>
+          <img src="http://placehold.it/300x300?text=Upload Profile" class="centerimage rounded-circle" alt="" height="150" width="150">
+          <form>
 
-      <div class="startupp_frame3">
-        <h1 class="collab">Let's get started</h1>
-        <p class="startupp_frame3_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <form method="post">
-          <div class="col-12">
-             <div class="input-group input-group-md w-50 mx-auto">
-               <div class="input-group-append" style="margin-left: 100px;">
-               <input type="text" class="form-control" placeholder="Enter your e-mail ID">
-               <button class="btn btn-outline getStarted" type="submit">Get Started</button>
-               </div>
-             </div>
-          </div>
-        </form>
+            <div class="form-group offset-md-4">
+              <label for="name">Name</label>
+              <div class="input-group row">
+                <div class="input-group-prepend ml-3 mr-3">
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Mr.
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                  </div>
+                </div>
+                <input type="text" id="name" name="name" class="col-6 form-control" placeholder="">
+              </div>
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="phone">Phone number</label>
+              <div class="input-group row">
+                <div class="input-group-prepend ml-3 mr-3">
+                  <input type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
+                </div>
+                <input type="text" id="phone" name="phone" class="col-6 form-control" placeholder="">
+              </div>
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="email">Email:</label>
+              <input type="text" class="col-7 form-control" id="email" name="email">
+            </div>
+
+
+            <div class="form-group offset-md-4">
+              <label for="business_name">Registered business name</label>
+                <input type="text" id="business_name" name="business_name" class="col-7 form-control">
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="brand_name">Brand name</label>
+                <input type="text" id="brand_name" name="brand_name" class="col-7 form-control">
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="type_of_company">Type of company</label>
+              <select class="col-7 form-control" id="type_of_company" name="type_of_company">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+
+            <div class="form-group offset-md-4">
+              <label for="id_proof">ID Proof</label>
+              <div class="input-group row ml-0">
+                <input type="text" id="phone" name="phone" class="col-6 form-control" placeholder="">
+                <!-- <div class="input-group-append">
+                  <input type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
+                </div> -->
+                <div class="input-group-append ml-3">
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Aadhar
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Passport</a>
+                    <a class="dropdown-item" href="#">Driving</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="address">Address</label>
+              <textarea class="col-7 form-control" rows="2" id="address" name="address"></textarea>
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="industry">Type of company</label>
+              <select class="col-7 form-control" id="industry" name="industry">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="business_pan">Business PAN</label>
+                <input type="text" id="business_pan" name="business_pan" class="col-7 form-control">
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="gst_number">GST Number</label>
+                <input type="text" id="gst_number" name="gst_number" class="col-7 form-control">
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="website">Website</label>
+                <input type="text" id="website" name="website" class="col-7 form-control">
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="business_address">Business Address</label>
+              <textarea class="col-7 form-control" rows="2" id="business_address" name="business_address"></textarea>
+            </div>
+
+            <div class="form-group offset-md-4">
+              <label for="turnover">Last year turnover</label>
+              <div class="input-group row ml-0">
+                <input type="text" id="turnover" name="turnover" class="col-6 form-control" placeholder="">
+                <div class="input-group-append ml-3">
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Lakhs
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Crore</a>
+                    <a class="dropdown-item" href="#">werwr</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group offset-md-4" id="add_more_element">
+              <label for="services_offered">List of products/ services you offer</label>
+              <input type="text" id="services_offered" name="services_offered" class="col-7 form-control">
+              <input type="text" id="services_offered2" name="services_offered2" class="mt-2 col-7 form-control">
+              <input type="text" id="services_offered3" name="services_offered3" class="mt-2 col-7 form-control">
+            </div>
+            <a href="javascript:add_feed()" class="offset-md-4 mt-2 btn btn-sm btn-outline-success" name="add_more">Add more</a>
+          </form>
+        </div>
       </div>
 
         <!-- Footer -->
@@ -294,31 +374,26 @@
 
 
       <script>
+          var counter=4;
 
-        $(document).ready(function(){
-            $('.customer-logos').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                }]
-            });
-        });
+          function add_feed()
+          {
+            if(counter>=15){
+              alert("Can't add more");
+              return;
+            }
+          	// var div1 = '<input type="text" id="services_offered3" name="services_offered3" class="mt-2 col-7 form-control"';
+            var div1 = document.createElement("input");
+            div1.type = "text";
+            div1.id = "services_offered" + counter;
+            div1.name = "services_offered" + counter;
+            div1.className = "mt-2 col-7 form-control";
+            counter++;
+          	document.getElementById('add_more_element').appendChild(div1);
+          }
 
       </script>
+
 
   </body>
 </html>
