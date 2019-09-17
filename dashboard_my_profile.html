@@ -19,6 +19,7 @@
   <body>
 
     <style>
+
       .navbar-nav.mx-auto.text-center li a {
         font-weight: 550;
         color: black;
@@ -56,9 +57,19 @@
         margin-bottom: 8px;
       }
 
+      .img_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+      }
+
+      .ticked{
+        color: orange;
+      }
 
       /* footer */
-      .fa {
+      /* .fa {
         padding: 10px;
         font-size: 10px;
         width: 30px;
@@ -82,14 +93,15 @@
       .fa-google {
         background: #dd4b39;
         color: white;
-      }
+      } */
 
       /* footer */
 
-      /*Create ripple effect*/
+      .fa-star{
+        padding: 0;
+        margin: 0;
+      }
 
-
-      /* End Ripple Effect */
 
     </style>
 
@@ -122,7 +134,7 @@
           </div>
       </nav>
 
-      <div class="dashboard_blog_frame1">
+      <div class="dashboard_my_profile_frame1 mt-4">
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-3" style="">
@@ -133,19 +145,105 @@
           </div>
 
           <div class="col-md-7" style="">
-            <div class="blog">
-              <div class="card">
-                  <img class="card-img-top" src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg" height="220px;" alt="Card image cap">
-                  <div class="card-body">
-                    <a href="#" class="card-link">wersfgwrgwr wr rwr wr w</a>
+            <div class="clearfix">
+              <p><span class="font-weight-bold">My Profile</span><span class="float-right" style="color: #C0C0C0;">Logout</span><p>
+            </div>
+            <img class="img_center rounded-circle" src="http://placehold.it/350x350?text=Logo" width="180" height="180">
+            <form>
+              <div class="row mt-3 p-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
                   </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="text" class="form-control" id="phone" name="phone">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="business_name">Business name</label>
+                    <input type="text" class="form-control" id="business_name" name="business_name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="text" class="form-control" id="website" name="website">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <input type="text" class="form-control" id="industry" name="industry">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="sub_industry">Sub Industry</label>
+                    <input type="text" class="form-control" id="sub_industry" name="sub_industry">
+                  </div>
+                </div>
+                <div class="col-md-12" id="add_more_element">
+                  <label for="services_offered">List of products/ services you offer</label>
+                  <input type="text" id="services_offered" name="services_offered" class="form-control">
+                  <input type="text" id="services_offered2" name="services_offered2" class="mt-2 form-control">
+                  <input type="text" id="services_offered3" name="services_offered3" class="mt-2 form-control">
+                </div>
+                <div class="col-md-12">
+                  <a class="p-2" href="javascript:add_feed()">Add more</a>
+                </div>
+                <div class="col-md-3 mt-2">
+                  <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" name="company">
+                  </div>
+                </div>
+                <div class="col-md-3 mt-2">
+                  <div class="form-group">
+                    <label for="nme">Name</label>
+                    <input type="text" class="form-control" id="nme" name="nme">
+                  </div>
+                </div>
+                <div class="col-md-3 mt-2">
+                  <div class="form-group">
+                    <label for="service_taken">Service Taken</label>
+                    <input type="text" class="form-control" id="service_taken" name="service_taken">
+                  </div>
+                </div>
+                <div class="col-md-3 mt-2">
+                  <div class="form-group">
+                    <p>Rate Experience</p>
+                    <div class="">
+                      <span class="fa fa-star ticked"></span>
+                      <span class="fa fa-star ticked"></span>
+                      <span class="fa fa-star ticked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </div>
+            </form>
           </div>
           <div class="col-md-1"></div>
         </div>
       </div>
-
 
 
 
@@ -256,10 +354,23 @@
 
 
       <script>
+            var counter=4;
 
-        $(document).ready(function(){
-
-        });
+            function add_feed()
+            {
+              if(counter>=15){
+                alert("Can't add more");
+                return;
+              }
+              // var div1 = '<input type="text" id="services_offered3" name="services_offered3" class="mt-2 col-7 form-control"';
+              var div1 = document.createElement("input");
+              div1.type = "text";
+              div1.id = "services_offered" + counter;
+              div1.name = "services_offered" + counter;
+              div1.className = "mt-2 form-control";
+              counter++;
+              document.getElementById('add_more_element').appendChild(div1);
+            }
 
       </script>
 

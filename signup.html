@@ -12,13 +12,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
     <title>Exmyb</title>
   </head>
   <body>
 
     <style>
+      .img_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+      }
       .navbar-nav.mx-auto.text-center li a {
         font-weight: 550;
         color: black;
@@ -44,16 +48,6 @@
         border: 1px solid #628A3C;
         border-radius: 8px;
         -webkit-transition: margin-right 0.8s;
-      }
-
-      .dashboard_blog_frame1{
-        margin-top: 50px;
-      }
-      .sidelist{
-        border-radius: 10px;
-        border: 2px solid #73AD21;
-        padding: 6px 20px;
-        margin-bottom: 8px;
       }
 
 
@@ -86,10 +80,15 @@
 
       /* footer */
 
-      /*Create ripple effect*/
+      .img_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+        width: 100%;
+        height: auto;
+      }
 
-
-      /* End Ripple Effect */
 
     </style>
 
@@ -100,6 +99,7 @@
           <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
               <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
               <ul class="navbar-nav mx-auto text-center">
                   <li class="nav-item">
@@ -122,32 +122,34 @@
           </div>
       </nav>
 
-      <div class="dashboard_blog_frame1">
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-3" style="">
-            <div class="sidelist">My Profile</div>
-            <div class="sidelist">Looking for?</div>
-            <div class="sidelist">Proposal</div>
-            <div class="sidelist">Blogs</div>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-7">
+            <img src="http://placehold.it/700x700?text=Logo" class="img_center" style="" class="">
           </div>
-
-          <div class="col-md-7" style="">
-            <div class="blog">
-              <div class="card">
-                  <img class="card-img-top" src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg" height="220px;" alt="Card image cap">
-                  <div class="card-body">
-                    <a href="#" class="card-link">wersfgwrgwr wr rwr wr w</a>
-                  </div>
+          <div class="col-md-5">
+            <h2 style="font-weight: bold;font-size: 35px;">Sign up</h2>
+            <p>Already have an account? <span style="color: #87c240;">Log in</span></p>
+            <form method="post">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Ex: Rahul Sharma">
               </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Ex: rahul@exmyb.com">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="">
+              </div>
+              <button type="submit" class="btn btn-md" style="color: white;background-color: #628A3C;border-radius: 8px">Submit</button>
+              <hr>
+              <p>Or sign up with <a style=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+            </form>
           </div>
-          </div>
-          <div class="col-md-1"></div>
         </div>
       </div>
-
-
-
 
         <!-- Footer -->
         <footer class="page-footer">
@@ -257,9 +259,6 @@
 
       <script>
 
-        $(document).ready(function(){
-
-        });
 
       </script>
 
