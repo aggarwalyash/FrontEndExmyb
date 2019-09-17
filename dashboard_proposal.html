@@ -88,22 +88,6 @@
 
       /* footer */
 
-      .card_results{
-          border: 3px solid #eaeae1;
-          padding: 20px;
-      }
-      .modal-header {
-          padding:5px 15px;
-          border-bottom:1px solid #eee;
-          background-color: #000000;
-          color: #87c240;
-          -webkit-border-top-left-radius: 5px;
-          -webkit-border-top-right-radius: 5px;
-          -moz-border-radius-topleft: 5px;
-          -moz-border-radius-topright: 5px;
-           border-top-left-radius: 5px;
-           border-top-right-radius: 5px;
-       }
 
       /*Create ripple effect*/
 
@@ -152,12 +136,27 @@
           </div>
 
           <div class="col-md-7" style="">
-            <p><span class="font-weight-bold">Proposals </span><span class="float-right" style="color: #C0C0C0;">All <i class="fa fa-chevron-down" aria-hidden="true"></i></span><p>
+            <div>
+              <div style="display: inline;" class="font-weight-bold">Proposals </div>
+              <!-- <span class="float-right" style="color: #C0C0C0;">All <i class="fa fa-chevron-down" aria-hidden="true"></i></span> -->
+
+              <div style="display: inline;" class="dropdown float-right">
+                <a class="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  All
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">All</a>
+                  <a class="dropdown-item" href="#">Accepted</a>
+                  <a class="dropdown-item" href="#">Declined</a>
+                </div>
+              </div>
+            </div>
+
             <hr>
             <div class="proposal_container">
               <div class="row">
                 <div class="col-md-3">
-                  <img class="rounded-circle" src="http://placehold.it/550x550?text=Logo" height="120" width="120" alt="">
+                  <img class="ml-4 rounded-circle" src="http://placehold.it/550x550?text=Logo" height="120" width="120" alt="">
                 </div>
                 <div class="col-md-9">
                     <div class="mt-2">
@@ -179,7 +178,7 @@
             <div class="proposal_container">
               <div class="row">
                 <div class="col-md-3">
-                  <img class="rounded-circle" src="http://placehold.it/550x550?text=Logo" height="120" width="120" alt="">
+                  <img class="ml-4 rounded-circle" src="http://placehold.it/550x550?text=Logo" height="120" width="120" alt="">
                 </div>
                 <div class="col-md-9">
                     <div class="mt-2">
@@ -201,7 +200,7 @@
             <div class="proposal_container">
               <div class="row">
                 <div class="col-md-3">
-                  <img class="rounded-circle" src="http://placehold.it/550x550?text=Logo" height="120" width="120" alt="">
+                  <img class="ml-4 rounded-circle" src="http://placehold.it/550x550?text=Logo" height="120" width="120" alt="">
                 </div>
                 <div class="col-md-9">
                     <div class="mt-2">
