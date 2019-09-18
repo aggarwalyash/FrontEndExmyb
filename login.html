@@ -12,8 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
     <title>Exmyb</title>
   </head>
   <body>
@@ -23,6 +21,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+
         /* width: 50%; */
       }
       .navbar-nav.mx-auto.text-center li a {
@@ -82,10 +81,15 @@
 
       /* footer */
 
-      /*Create ripple effect*/
+      .img_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+        width: 100%;
+        height: auto;
+      }
 
-
-      /* End Ripple Effect */
 
     </style>
 
@@ -120,22 +124,33 @@
       </nav>
 
       <div class="container">
-        <div class="row">
-          <div class="col-md-5" style="margin-top: 120px;">
-            <h3 style="font-weight: bold;font-size: 32px;">Contact us</h3>
-            <p>Mail us on <span style="color: #87c240;">contact@exmyb.com</span></p>
-            <p>Connect with us:
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-twitter"></a>
-              <a href="#" class="fa fa-google"></a>
-            </p>
+        <div class="row mt-5">
+          <div class="col-md-7">
+            <img src="images/login_signup.png" class="img_center" style="" class="">
           </div>
-          <div class="col-md-7" style="margin-top: 50px;">
-            <img src="images/contact-us.png" height="500" width="600" class="image">
+          <div class="col-md-5">
+            <h2 style="font-weight: bold;font-size: 35px;">Login</h2>
+            <p>Don't have an account? <span style="color: #87c240;">Sign Up</span></p>
+            <form method="post">
+              <!-- <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Ex: rahul@exmyb.com">
+              </div> -->
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="">
+              </div>
+              <button type="submit" class="btn btn-md" style="color: white;background-color: #628A3C;border-radius: 8px">Submit</button>
+              <hr>
+              <p>Or login with <a style=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+            </form>
           </div>
         </div>
       </div>
-
 
         <!-- Footer -->
         <footer class="page-footer">
@@ -244,6 +259,7 @@
 
 
       <script>
+
 
       </script>
 

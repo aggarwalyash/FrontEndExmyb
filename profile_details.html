@@ -194,7 +194,7 @@
 
 
             <div class="form-group offset-md-4 col-md-5">
-              <label for="id_proof">ID Proof</label>
+              <label for="id_proof">Personal ID Proof</label>
               <div class="input-group row ml-0">
                 <input type="text" id="phone" name="phone" class="form-control" placeholder="">
                 <!-- <div class="input-group-append">
@@ -202,24 +202,35 @@
                 </div> -->
                 <div class="input-group-append ml-3">
                   <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                    Aadhar
+                    Select ID Type
                   </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Passport</a>
-                    <a class="dropdown-item" href="#">Driving</a>
+                    <a class="dropdown-item" href="#">PAN No.</a>
+                    <!-- <a class="dropdown-item" href="#">Driving</a> -->
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="form-group offset-md-4 col-md-5">
-              <label for="address">Address</label>
+              <label for="address">Personal Address</label>
               <textarea class="form-control" rows="2" id="address" name="address"></textarea>
             </div>
 
             <div class="form-group offset-md-4 col-md-5">
-              <label for="industry">Type of company</label>
+              <label for="industry">Business Industry</label>
               <select class="form-control" id="industry" name="industry">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <div class="form-group offset-md-4 col-md-5">
+              <label for="sub_industry">Sub Industry</label>
+              <select class="form-control" id="sub_industry" name="sub_industry">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -254,11 +265,11 @@
                 <input type="text" id="turnover" name="turnover" class="form-control" placeholder="">
                 <div class="input-group-append ml-3">
                   <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                    Lakhs
+                    Thousands
                   </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Crore</a>
-                    <a class="dropdown-item" href="#">werwr</a>
+                    <a class="dropdown-item" href="#">Lakhs</a>
+                    <a class="dropdown-item" href="#">Crores</a>
                   </div>
                 </div>
               </div>
@@ -266,11 +277,12 @@
 
             <div class="form-group offset-md-4 col-md-5" id="add_more_element">
               <label for="services_offered">List of products/ services you offer</label>
-              <input type="text" id="services_offered" name="services_offered" class="form-control">
+              <textarea class="form-control" id="services_offered" name="services_offered" rows="3"></textarea>
+              <!-- <input type="text" id="services_offered" name="services_offered" class="form-control">
               <input type="text" id="services_offered2" name="services_offered2" class="mt-2 form-control">
-              <input type="text" id="services_offered3" name="services_offered3" class="mt-2 form-control">
+              <input type="text" id="services_offered3" name="services_offered3" class="mt-2 form-control"> -->
             </div>
-            <a href="javascript:add_feed()" class="offset-md-4 mt-2 btn btn-sm btn-outline-success" name="add_more">Add more</a>
+            <!-- <a href="javascript:add_feed()" class="offset-md-4 mt-2 btn btn-sm btn-outline-success" name="add_more">Add more</a> -->
           </form>
         </div>
       </div>
@@ -382,23 +394,22 @@
 
 
       <script>
-          var counter=4;
 
-          function add_feed()
-          {
-            if(counter>=15){
-              alert("Can't add more");
-              return;
-            }
-          	// var div1 = '<input type="text" id="services_offered3" name="services_offered3" class="mt-2 col-7 form-control"';
-            var div1 = document.createElement("input");
-            div1.type = "text";
-            div1.id = "services_offered" + counter;
-            div1.name = "services_offered" + counter;
-            div1.className = "mt-2 form-control";
-            counter++;
-          	document.getElementById('add_more_element').appendChild(div1);
-          }
+          // var counter=4;
+          // function add_feed()
+          // {
+          //   if(counter>=15){
+          //     alert("Can't add more");
+          //     return;
+          //   }
+          //   var div1 = document.createElement("input");
+          //   div1.type = "text";
+          //   div1.id = "services_offered" + counter;
+          //   div1.name = "services_offered" + counter;
+          //   div1.className = "mt-2 form-control";
+          //   counter++;
+          // 	document.getElementById('add_more_element').appendChild(div1);
+          // }
 
       </script>
 
