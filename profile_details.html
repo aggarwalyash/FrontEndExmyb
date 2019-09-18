@@ -217,8 +217,6 @@
                   <select class="form-control" id="identity_card" name="identity_card">
                     <option>Aadhar Number</option>
                     <option>PAN</option>
-                    <!-- <option>3</option> -->
-                    <!-- <option>4</option> -->
                   </select>
                   <!-- <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
                     Select ID Type
@@ -278,21 +276,23 @@
               <textarea class="form-control" rows="2" id="business_address" name="business_address"></textarea>
             </div>
 
+
             <div class="form-group offset-md-4 col-md-5">
               <label for="turnover">Last year turnover</label>
               <div class="input-group row ml-0">
-                <input type="text" id="turnover" name="turnover" class="form-control" placeholder="">
-                <div class="input-group-append ml-3">
-                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                    Thousands
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Lakhs</a>
-                    <a class="dropdown-item" href="#">Crores</a>
-                  </div>
+                <input type="text" id="turnover_1" name="turnover_1" class="form-control" placeholder="">
+                <div class="input-group-append mx-2">
+                  <input type="text" id="turnover_2" name="turnover_2" class="form-control" placeholder="">
+                </div>
+                <div class="input-group-append ml-4">
+                  <select class="form-control" id="amount_in" name="amount_in">
+                    <option>Lakhs</option>
+                    <option>Crores</option>
+                  </select>
                 </div>
               </div>
             </div>
+
 
             <div class="form-group offset-md-4 col-md-5" id="add_more_element">
               <label for="services_offered">List of products/ services you offer</label>
