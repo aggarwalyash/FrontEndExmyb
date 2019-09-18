@@ -70,6 +70,13 @@
         margin-right: auto;
       }
 
+      #imageUpload{
+          display: none;
+      }
+      #profileImage{
+          cursor: pointer;
+      }
+
       /* footer */
       .fa {
         padding: 10px;
@@ -135,8 +142,10 @@
       <div class="profile_details_frame1">
         <div class="">
           <h1 style="text-align: center;">Profile Details</h1>
-          <img src="http://placehold.it/300x300?text=Upload Profile" class="centerimage rounded-circle" alt="" height="150" width="150">
+          <img id="profileImage" src="images/change_photo.png" class="centerimage rounded-circle" alt="" height="150" width="150">
           <form>
+            <!-- <input type="image" -->
+            <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
 
             <div class="form-group offset-md-4 col-md-8">
               <label for="name">Name</label>
@@ -384,12 +393,34 @@
             <!-- Grid row -->
           </div>
           <!-- Footer Links -->
-          
+
         </footer>
 
 
 
       <script>
+
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  $('#profileImage').attr('src', e.target.result);
+              }
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+
+
+      $("#imageUpload").change(function(){
+          if(document.getElementById("imageUpload").value != "") {
+            // alert("Image added successfully!");
+            readURL(this);
+          }
+      });
+
+          $("#profileImage").click(function(e) {
+              $("#imageUpload").click();
+          });
 
           // var counter=4;
           // function add_feed()
