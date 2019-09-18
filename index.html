@@ -343,8 +343,6 @@
       /* footer */
 
       /*Create ripple effect*/
-
-
       /* End Ripple Effect */
 
     </style>
@@ -434,19 +432,20 @@
         </div>
       </div>
 
-      <div class="container frame8" style="margin-top: 70px;">
+      <div class="container frame8" id="frame8" style="margin-top: 70px;">
         <div class="row">
           <div class="col-md-4" style="margin-top: 90px;">
             <div class="mt-3" style="text-align: center;">
-              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="count">700</span>+</h3>
+              <!-- <div class="counter-value" data-count="700">700</div> -->
+              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="counter-value" data-count="700">700</span>+</h3>
               <p>Business served</p>
             </div>
             <div class="mt-3" style="text-align: center;">
-              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="count">1</span> CR+</h3>
+              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="counter-value" data-count="1">1</span> CR+</h3>
               <p>Business value added</p>
             </div>
             <div class="mt-3" style="text-align: center;">
-              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="count">30</span>+</h3>
+              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="counter-value" data-count="30">30</span>+</h3>
               <p>States spread across</p>
             </div>
           </div>
@@ -495,27 +494,28 @@
         </p>
       </div>
 
-<section class="testimonials py-5 text-white px-1 px-md-5 margin-top-xl">
-  <!-- <img src="https://raw.githubusercontent.com/solodev/testimonial-slider-fullwidth/master/solodev-logo-stacked.png" class="icon-overlay" /> -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="pt-2 text-center font-weight-bold">Our Customers Are Seeing Big Results</h2>
 
-        <div class="carousel-controls testimonial-carousel-controls">
-          <div class="control d-flex align-items-center justify-content-center prev mt-3"><i class="fa fa-chevron-left"></i></div>
-          <div class="control d-flex align-items-center justify-content-center next mt-3"><i class="fa fa-chevron-right"></i></div>
-          <div class="testimonial-carousel">
-              <div class="">dafffa</div>
-              <div class="">daadda</div>
-              <div class="">dsdd</div>
-              <div class="">afsfff</div>
+      <section class="testimonials py-5 text-white px-1 px-md-5 margin-top-xl">
+        <!-- <img src="https://raw.githubusercontent.com/solodev/testimonial-slider-fullwidth/master/solodev-logo-stacked.png" class="icon-overlay" /> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="pt-2 text-center font-weight-bold">Our Customers Are Seeing Big Results</h2>
+
+              <div class="carousel-controls testimonial-carousel-controls">
+                <div class="control d-flex align-items-center justify-content-center prev mt-3"><i class="fa fa-chevron-left"></i></div>
+                <div class="control d-flex align-items-center justify-content-center next mt-3"><i class="fa fa-chevron-right"></i></div>
+                <div class="testimonial-carousel">
+                    <div class="">dafffa</div>
+                    <div class="">daadda</div>
+                    <div class="">dsdd</div>
+                    <div class="">afsfff</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <div class="d-flex justify-content-center frame5" style="margin-top: 50px;">
@@ -641,6 +641,38 @@ qualified and verified community.</p>
 
         $(document).ready(function(){
 
+          //counter
+          var a = 0;
+          $(window).scroll(function() {
+            var oTop = $('#frame8').offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+              $('.counter-value').each(function() {
+                var $this = $(this),
+                  countTo = $this.attr('data-count');
+                $({
+                  countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                  },
+                  {
+                    duration: 6000,
+                    easing: 'swing',
+                    step: function() {
+                      $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                      $this.text(this.countNum);
+                      //alert('finished');
+                    }
+                  });
+              });
+              a = 1;
+            }
+          });
+
+          //counter
+
+
           $(".testimonial-carousel").slick({
             infinite: true,
             slidesToShow: 1,
@@ -651,17 +683,19 @@ qualified and verified community.</p>
             nextArrow: $(".testimonial-carousel-controls .next")
           });
 
-          $('.count').each(function () {
-            $(this).prop('Counter',0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 10000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-          });
+          // $('.count').each(function () {
+          //   $(this).prop('Counter',0).animate({
+          //       Counter: $(this).text()
+          //   }, {
+          //       duration: 10000,
+          //       easing: 'swing',
+          //       step: function (now) {
+          //           $(this).text(Math.ceil(now));
+          //       }
+          //   });
+          // });
+
+
 
             $('.customer-logos').slick({
                 slidesToShow: 6,
