@@ -151,13 +151,17 @@
               <label for="name">Name</label>
               <div class="input-group row">
                 <div class="input-group-prepend ml-3 mr-4">
-                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                  <select class="form-control" id="designation" name="designation">
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                  </select>
+                  <!-- <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
                     Mr.
                   </button>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Link 1</a>
                     <a class="dropdown-item" href="#">Link 2</a>
-                  </div>
+                  </div> -->
                 </div>
                 <input type="text" id="name" name="name" class="col-6 form-control" placeholder="">
               </div>
@@ -210,13 +214,19 @@
                   <input type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
                 </div> -->
                 <div class="input-group-append ml-3">
-                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                  <select class="form-control" id="identity_card" name="identity_card">
+                    <option>Aadhar Number</option>
+                    <option>PAN</option>
+                    <!-- <option>3</option> -->
+                    <!-- <option>4</option> -->
+                  </select>
+                  <!-- <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
                     Select ID Type
                   </button>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">PAN No.</a>
-                    <!-- <a class="dropdown-item" href="#">Driving</a> -->
-                  </div>
+                    <a class="dropdown-item" href="#">Driving</a>
+                  </div> -->
                 </div>
               </div>
             </div>
