@@ -16,9 +16,20 @@
   <body>
 
     <style>
+      .landing-image{
+        position: absolute;
+        top: 160px;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px;
+        border-radius: 50px;
+      }
+
+
       .frontline{
         font-weight: bolder;
-        font-size: 48px;
+        font-size: 58px;
       }
       .aboutus{
         text-align: center;
@@ -43,13 +54,14 @@
       }
       .frame5{
         background-color: #87c240;
-        padding: 65px;
+        padding: 45px;
         text-align: center;
       }
       .framecontent5{
         margin-top: 20px;
         font-weight: 600;
         color: #628A3C;
+        padding: 0 100px;
         word-spacing: 1px;
       }
       .getStarted{
@@ -61,6 +73,10 @@
         background-color: #628A3C;
         color: #ffffff;
         position: relative;
+      }
+      .getStarted2:hover{
+        color: #ffffff;
+        /* background-color: #87c240; */
       }
       .getStarted:hover{
         background-color: #87c240;
@@ -262,16 +278,13 @@
           <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
               <ul class="navbar-nav mx-auto text-center">
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Know Us <span class="sr-only">Know Us</span></a>
+                      <a class="nav-link" href="#">About Us <span class="sr-only">About Us</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Startup</a>
+                      <a class="nav-link" href="#">How We Work</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Investor</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
+                      <a class="nav-link" href="#">Join Us</a>
                   </li>
               </ul>
               <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
@@ -281,66 +294,57 @@
           </div>
       </nav>
 
-      <div class="container frame1">
-        <div class="row" style="margin-top:80px;">
-          <div class="col-md-6">
-            <h1 class="frontline">Expand your business!</h1>
-            <p style="color: #A9A9A9;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <form method="post">
-                <div class="input-group mb-3">
-                  <div class="input-group-append">
-                  <input type="text" class="form-control" placeholder="Enter your e-mail ID">
-                    <button class="btn btn-outline getStarted"  type="submit">Get Started</button>
-                  </div>
-                </div>
-            </form>
+      <div class="container frame1" style="">
+        <div class="clearfix" style="margin-top:80px;">
+          <div class="" style="margin-bottom: 0px;padding-bottom: 0px;">
+            <h1 class="frontline">Expand Your Business!</h1>
+            <p style="color: #A9A9A9;">A robust online and offline system helps ExMyB help all its’ members to gain and grow.</p>
+            <a href="" class="btn btn-outline getStarted border border-4">Get Started</a>
           </div>
-          <div class="col-md-6">
-            <img class="mr-5" src="images/landing_page.png" width="550" height="450" alt="">
+          <div class="float-right landing-image" style="">
+            <img class="mr-3" src="images/landing_page.png" width="650" height="500" alt="">
           </div>
         </div>
       </div>
 
 
-      <div class="container frame2" style="margin-top: 100px;">
-        <h2 class="aboutus">About us</h2>
+      <div class="container frame2" style="position: relative;margin-top: 320px;">
+        <h2 class="aboutus">About Us</h2>
         <hr style="width: 75%;">
         <p class="aboutus_content">ExMyB is a cross collaboration platform which helps businesses grow, expand and collaborate via other
-          businesses on the platform. ExMyB through its’ curated onboarding process welcomes exclusive and
-          verified businesses.
+            businesses on the platform. ExMyB through its’ curated onboarding process welcomes exclusive and
+            verified businesses.
         </p>
-        <p class="aboutus_content">ExMyB is a cross collaboration platform which helps businesses grow, expand and collaborate via other
-          businesses on the platform. ExMyB through its’ curated onboarding process welcomes exclusive and
-          verified businesses.
+        <p class="aboutus_content">ExMyB’s unique relevant search technology allows users to find the right businesses to connect for you
+            and is what sets ExMyB apart and a perfect goto platform for all business needs.
         </p>
-        <p class="aboutus_content">ExMyB is a cross collaboration platform which helps businesses grow, expand and collaborate via other
-          businesses on the platform. ExMyB through its’ curated onboarding process welcomes exclusive and
-          verified businesses.
+        <p class="aboutus_content">ExMyB believes in the value system based on collaborations where the more you give the more you get.
+          The platform does not charge any transaction based fee to encourage a participative ecosystem of
+          transparency, to lift the spirit of ‘ease of business’
         </p>
       </div>
 
       <div class="container frame3" style="margin-top: 80px;">
         <h2 class="aboutus">Process</h2>
         <hr style="width: 75%;">
-        <p class="aboutus_content">ExMyB is a cross collaboration platform which helps businesses grow, expand and collaborate via other
-          businesses on the platform. ExMyB through its’ curated onboarding process welcomes exclusive and
-          verified businesses.
-        </p>
+        <p class="mb-0 text-center">List your business, get noticed.</p>
+        <p class="mt-0 mb-0 text-center">List your requirements, get them fulfilled.</p>
+        <p class="mt-0 text-center">Becoming a ExMyB user is as simple as 3 steps.</p>
         <div class="row" style="">
           <div class="col-md-4">
-            <img src="images/process_phase_1.png" class="img_center" width="150" height="150" alt="">
+            <img src="images/process_phase_1.png" class="img_center" width="130" height="130" alt="">
             <p style="padding: 25px;text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,commodo consequat.
             </p>
           </div>
           <div class="col-md-4">
-            <img src="images/process_phase_2.png" class="img_center" width="150" height="150" alt="">
+            <img src="images/process_phase_2.png" class="img_center" width="130" height="130" alt="">
             <p style="padding: 25px;text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,commodo consequat.
             </p>
           </div>
           <div class="col-md-4">
-            <img src="images/process_phase_3.png" class="img_center " width="150" height="150" alt="">
+            <img src="images/process_phase_3.png" class="img_center " width="130" height="130" alt="">
             <p style="padding: 25px;text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,commodo consequat.
             </p>
@@ -352,30 +356,30 @@
         <div class="row">
           <div class="col-md-4" style="margin-top: 90px;">
             <div class="mt-3" style="text-align: center;">
-              <h3 class="count" style="font-weight: bolder;font-size: 55px;color: #628A3C;">457</h3>
-              <p>clients</p>
+              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="count">700</span>+</h3>
+              <p>Business served</p>
             </div>
             <div class="mt-3" style="text-align: center;">
-              <h3 class="count" style="font-weight: bolder;font-size: 55px;color: #628A3C;">457</h3>
-              <p>clients</p>
+              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="count">1</span> CR+</h3>
+              <p>Business value added</p>
             </div>
             <div class="mt-3" style="text-align: center;">
-              <h3 class="count" style="font-weight: bolder;font-size: 55px;color: #628A3C;">457</h3>
-              <p>clients</p>
+              <h3 class="mb-0" style="font-weight: bolder;font-size: 55px;color: #628A3C;"><span class="count">30</span>+</h3>
+              <p>States spread across</p>
             </div>
           </div>
           <div class="col-md-8">
             <h2 style="font-weight: bold;font-size: 54px;">Why Join?</h2>
             <div class="clearfix"><hr width="85%" style="float: left;"></div>
-            <p>As a member of ExMyB, not only does one become part of our valuable network chain,
-              leading to a lot of businesses transactions, but also forms long term and meaningful
-              associations with businesses which is the fundamental base of all successful businesses.
-            </p>
-            <p>We can have a member tills now type of table. Similar to the one at BNI.</p>
+            <ul class="mt-3">
+                <li>Grow & Expand Your Business</li>
+                <li>Get Qualified Leads</li>
+                <li>Save Time & Hassle to find the Right Business Partner</li>
+            </ul>
             <h6 style="font-weight: bold;font-size: 22px;">Who can join?</h6>
-            <p>Any business looking to expand, grow and transact with other businesses is welcome.</p>
-            <p>However to assure quality, you must have:</p>
-            <ul>
+            <p class="">Any business looking to expand, grow and transact with other businesses is welcome.</p>
+            <p class="mt-0 mb-0">However to assure quality, you must have:</p>
+            <ul class="mt-0">
               <li>Registered Business</li>
               <li>Official Documents - Personal and Business</li>
               <li>2 client referrals</li>
@@ -385,7 +389,7 @@
       </div>
 
 
-      <div class="container">
+      <div class="container mt-5">
          <section class="customer-logos slider">
             <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
             <div class="slide"><img class="image rounded-circle" src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
@@ -413,15 +417,13 @@
       <div class="d-flex justify-content-center frame5" style="margin-top: 50px;">
         <div>
           <h1 class="collab">Let’s get started.</h1>
-          <p class="framecontent5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <form method="post">
-                <div class="input-group mb-3" style="margin-left: 40px;">
-                  <div class="input-group-append">
-                  <input type="text" class="form-control" width="100%" placeholder="Enter your e-mail ID">
-                    <button class="btn btn-block btn-outline getStarted2" type="submit">Get Started</button>
-                  </div>
-                </div>
-            </form>
+          <p class="framecontent5">We believe that every business have their demands to fulfil and as well as fulfil other businesses’ demands on the platform
+in the business community and this is where we try to match this over our platform. ExMyB is a one-stop platform for your
+business requirements and saves time to cater to your requirements. In return, you end up taking and giving business with a
+qualified and verified community.</p>
+          <p class="framecontent5 mt-0 mb-0">A robust online and offline system helps ExMyB help all its’ members to gain and grow.</p>
+          <p class="framecontent5 mt-0">Join Now and Start Expanding!</p>
+          <a href="#" class="btn getStarted2">Get Started</a>
         </div>
       </div>
 
