@@ -172,9 +172,9 @@
               <label for="phone">Phone number</label>
               <div class="input-group row">
                 <div class="input-group-prepend ml-3 mr-4">
-                  <input type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
+                  <input disabled type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
                 </div>
-                <input type="text" id="phone" name="phone" class="col-6 form-control" placeholder="">
+                <input type="text" id="phone" name="phone" maxlength="10" class="col-6 form-control" placeholder="">
               </div>
             </div>
 
@@ -409,6 +409,10 @@
 
 
       <script>
+
+      $('#phone').keyup(function () {
+          this.value = this.value.replace(/[^0-9\.]/g,'');
+      });
 
       function readURL(input) {
           if (input.files && input.files[0]) {
