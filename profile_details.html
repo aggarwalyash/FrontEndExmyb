@@ -17,6 +17,9 @@
   <body>
 
     <style>
+
+      /* .form-control:focus{border-color: #5cb85c; -webkit-box-shadow: none;}  */
+
       @font-face {
         font-family: myFirstFont;
         src: url(fonts/Uniform.ttf);
@@ -138,55 +141,53 @@
       </nav>
 
 
-      <div class="profile_details_frame1">
+      <h1 style="text-align: center;" class="mt-4">Profile Details</h1>
+      <img id="profileImage" src="images/change_photo.png" class="centerimage rounded-circle" alt="" height="150" width="150">
+
+      <div class="profile_details_frame1 offset-md-4">
         <div class="">
-          <h1 style="text-align: center;">Profile Details</h1>
-          <img id="profileImage" src="images/change_photo.png" class="centerimage rounded-circle" alt="" height="150" width="150">
           <form>
-            <!-- <input type="image" -->
             <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
 
-            <div class="form-group offset-md-4 col-md-8">
+            <div class="form-group col-md-7">
               <label for="name">Name</label>
-              <div class="input-group row">
-                <div class="input-group-prepend ml-3 mr-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
                   <select class="form-control" id="designation" name="designation">
                     <option>Mr.</option>
                     <option>Ms.</option>
                   </select>
                 </div>
-                <input type="text" id="name" name="name" class="col-6 form-control" placeholder="">
+                <input type="text" class="form-control" placeholder="" id="name" name="name">
               </div>
             </div>
 
-
-            <div class="form-group offset-md-4 col-md-8">
-              <label for="phone">Phone number</label>
-              <div class="input-group row">
-                <div class="input-group-prepend ml-3 mr-4">
+            <div class="form-group col-md-7">
+              <label for="name">Phone number</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
                   <input disabled type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
                 </div>
-                <input type="text" id="phone" name="phone" maxlength="10" class="col-6 form-control" placeholder="">
+                <input type="text" class="form-control" name="" maxlength="10" placeholder="">
               </div>
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
-              <label for="email">Email:</label>
+            <div class="form-group col-md-7">
+              <label for="name">Email</label>
               <input type="text" class="form-control" id="email" name="email">
             </div>
 
-
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="business_name">Registered business name</label>
                 <input type="text" id="business_name" name="business_name" class="form-control">
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="brand_name">Brand name</label>
                 <input type="text" id="brand_name" name="brand_name" class="form-control">
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="type_of_company">Type of company</label>
               <select class="form-control" id="type_of_company" name="type_of_company">
                 <option>1</option>
@@ -198,28 +199,25 @@
             </div>
 
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="id_proof">Personal ID Proof</label>
-              <div class="input-group row ml-0">
-                <input type="text" id="phone" name="phone" class="form-control" placeholder="">
-                <!-- <div class="input-group-append">
-                  <input type="text" id="code" name="code" class="form-control" placeholder="" value="+91" size="2">
-                </div> -->
-                <div class="input-group-append ml-3">
+              <div class="input-group mb-3">
+                <div class="input-group-append">
                   <select class="form-control" id="identity_card" name="identity_card">
                     <option>Aadhar Number</option>
                     <option>PAN</option>
                   </select>
                 </div>
+                <input type="text" class="form-control" placeholder="" id="id_no" name="id_no">
               </div>
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="address">Personal Address</label>
               <textarea class="form-control" rows="2" id="address" name="address"></textarea>
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="industry">Business Industry</label>
               <select class="form-control" id="industry" name="industry">
                 <option>1</option>
@@ -230,7 +228,7 @@
               </select>
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="sub_industry">Sub Industry</label>
               <select class="form-control" id="sub_industry" name="sub_industry">
                 <option>1</option>
@@ -241,35 +239,35 @@
               </select>
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="business_pan">Business PAN</label>
                 <input type="text" id="business_pan" name="business_pan" class="form-control">
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="gst_number">GST Number</label>
                 <input type="text" id="gst_number" name="gst_number" class="form-control">
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="website">Website</label>
                 <input type="text" id="website" name="website" class="form-control">
             </div>
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="business_address">Business Address</label>
               <textarea class="form-control" rows="2" id="business_address" name="business_address"></textarea>
             </div>
 
 
-            <div class="form-group offset-md-4 col-md-5">
+            <div class="form-group col-md-7">
               <label for="turnover">Last year turnover</label>
-              <div class="input-group row ml-0">
-                <input type="text" id="turnover_1" name="turnover_1" class="form-control" placeholder="">
-                <div class="input-group-append mx-2">
-                  <input type="text" id="turnover_2" name="turnover_2" class="form-control" placeholder="">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="" id="turnover_1" name="turnover_1">
+                <div class="input-group-append">
+                  <input type="text" class="form-control" placeholder="" id="turnover_2" name="turnover_2">
                 </div>
-                <div class="input-group-append ml-4">
+                <div class="input-group-append">
                   <select class="form-control" id="amount_in" name="amount_in">
                     <option>Lakhs</option>
                     <option>Crores</option>
@@ -278,8 +276,7 @@
               </div>
             </div>
 
-
-            <div class="form-group offset-md-4 col-md-5" id="add_more_element">
+            <div class="form-group col-md-7" id="add_more_element">
               <label for="services_offered">List of products/ services you offer</label>
               <textarea class="form-control" id="services_offered" name="services_offered" rows="3"></textarea>
               <!-- <input type="text" id="services_offered" name="services_offered" class="form-control">
@@ -287,7 +284,7 @@
               <input type="text" id="services_offered3" name="services_offered3" class="mt-2 form-control"> -->
             </div>
             <!-- <a href="javascript:add_feed()" class="offset-md-4 mt-2 btn btn-sm btn-outline-success" name="add_more">Add more</a> -->
-            <div class="form-group offset-md-4 col-md-5" id="add_more_element">
+            <div class="form-group offset-md-2 col-md-5" id="add_more_element">
               <button type="submit" class="btn btn-md float-right px-4" style="color: #ffffff;background-color: #87c240;" >Submit</button>
             </div>
           </form>
